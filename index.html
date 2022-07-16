@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    background:#ebd7b8;}
+
+div{
+    background:#f7efe2; 
+    margin:55px;
+    color:#56462d;
+    font-family: 'Scheherazade New', serif;}
+h1{
+    margin:10px;
+    padding:20px;
+    font-size:45px;}
+form{
+    padding:20px;
+    font-family: 'Scheherazade New', serif;
+    font-size:18px;}
+span{
+    color:red;}
+.font{
+    font-family: 'Scheherazade New', serif;}
+#type{
+    padding:0px 55px;
+    margin-right:300px;
+    color:#56462d;}
+#differ{
+    color:#56462d;}
+#msg{
+    resize:none;
+    background:#fbf7f0;}
+#rate{
+    padding:3px;
+    background:#f7efe2;
+    border-radius:25px;
+    font-size:15px;
+    color:#d7b071;}
+#mic{
+    cursor: pointer;
+    position:relative;
+    left:30px;
+    bottom:7px;}
+.buttons{
+    border: 1px solid black;
+    border-radius:2px;
+    margin:3px;
+    padding:0px 18px;
+    font-size:15px;
+    background:#f3e7d4; 
+    font-family: 'Scheherazade New', serif;
+    color:#56462d;
+    cursor: pointer;}
+.buttons:hover{
+color:#ebd7b8;}
+</style>
+
+</head>
+<body>
+<div>
+<h1>
+تواصل معنا</h1>
+<form action="" method="">
+<label for="fname">الأسم الأول </label><span>*</span>
+<label for="lname" style="margin-right:390px;">الأسم الأخير </label><span>*</span>
+<br>
+<input type="text" class="font" id="fname" name="fname" placeholder="الأسم الأول" required>
+<input type="text" class="font" id="lname" name="lname" style="margin-right:300px;" placeholder="الأسم الأخير" required>
+<br><br>
+<label for="email">البريد الإلكتروني </label><span>*</span>
+<label for="phone" style="margin-right:360px;">رقم الجوال </label><span>*</span>
+<br>
+<input type="email" class="font" id="email" name="email" placeholder="something@example.com" required>
+<input type="tel" class="font" id="phone" name="phone" pattern="[0-9]{10}" style="margin-right:300px;" placeholder="05xxxxxxxx" required>
+<br><br>
+<label for="title">عنوان الرسالة </label><span>*</span>
+<label for="type" style="margin-right:385px;">الغرض من الرسالة </label><span>*</span>
+<br>
+<input type="text" class="font" id="title" name="title" required>
+<select class="font" name="type" id="type" required>
+    <option value="suggestion">اقتراح</option>
+    <option value="question">استفسار</option>
+    <option value="complaint">شكوى</option>
+    <option value="other">أخرى</option>
+</select>
+<br><br>
+<span>*</span><span id="differ"> طريقة التواصل المفضلة:</span><br>
+<input type="radio" id="Email" name="selectedcontact" value="Email" required>
+<label for="Email">البريد الإلكتروني</label><br>
+<input type="radio" id="Phone" name="selectedcontact" value="Phone">
+<label for="Phone">رقم الجوال</label><br><br>
+
+<span>*</span><label for="msg"> الرسالة: </label><br>
+<textarea id="msg" class="font" name="msg" rows="6" cols="80" placeholder="اكتب رسالتك او تحدّث عن طريق علامة المايكروفون" required>
+</textarea>
+<img id="mic" src="img\mic.png" alt="please download the img" width="20px" height="20px" onclick=record()>
+<br><br><br>
+
+<label for="rate">قيّم الخدمة:</label>
+<select class="font" name="rate" id="rate">
+    <option value="excellent">ممتاز</option>
+    <option value="good">جيّد جدًا</option>
+    <option value="notBad">جيّد</option>
+    <option value="ok">مقبول</option>
+</select><br><br>
+<input type="submit" class="buttons" value="إرسال">
+<input type="reset" class="buttons" value="مسح">
+</form>
+</div>
+
+<script>
+function record() {
+var recognition = new webkitSpeechRecognition();
+            recognition.lang = "ar";
+            recognition.onresult = function(event) {
+                document.getElementById('msg').value += event.results[0][0].transcript + " ";}
+            recognition.start();} 
+    </script>
+
+</body>
+
+
+</html>
