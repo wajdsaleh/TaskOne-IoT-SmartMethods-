@@ -10,7 +10,5 @@ It's a simple JavaScript code that uses the webkitspeechrecognition function, to
 The microphone image src is from google, if you have any errors just upload the image 'mic.png' and correct the src.
 I choose this idea rather than a normal speech to text converter to make any company or individual that has a website and want a ready contact page can take this code and place it in the website.
 # Future updates
-Now the JavaScript code is using webkitspeechrecognition class wich work only on specified browsers like Chrome and Safari, there will be another update soon using another method to let the code work on Internet Explorer and Firefox.
+Now the JavaScript code is using webkitspeechrecognition class which work only on specified browsers like Chrome and Safari, there will be another update soon using another method to let the code work on Internet Explorer and Firefox.
 There will be some designing update as well.
-# Task One part 2
-Task one part 2 is about finding an algorithm to operate ESP32
