@@ -1,6 +1,6 @@
-# TaskOne-IoT-SmartMethods
-# Task One part 1
-Task one part 1 is creating a sample page to convert speech to text in Arabic.
+# Speech to text
+This is a task assigned by Smart Methods company. 
+It's about creating a sample page to convert speech to text in Arabic.
 # The idea
 I developed a sample contact page that asks about first and last name, phone number, email, and the message that the user wants us to receive.
 The message part is the speech recognition part because a lot of people find difficulties writing long messages so speech recognition will make it easier for them.
